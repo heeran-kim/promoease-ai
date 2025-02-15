@@ -1,8 +1,16 @@
 from fastapi import FastAPI, File, UploadFile
 import shutil
 import os
+from services.caption_generator import generate_caption
 
 app = FastAPI()
+
+@app.post("/generate-caption/")
+async def generate_image_caption():
+    caption = generate_caption()
+    return {"caption": caption}
+
+
 
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
@@ -14,6 +22,8 @@ async def upload_image(file: UploadFile = File(...)):
         shutil.copyfileobj(file.file, buffer)
     return {"filename": file.filename, "message": "Image uploaded successfully!"}
     # http://127.0.0.1:8000/docs
+
+
 
 @app.get("/")
 def read_root():
