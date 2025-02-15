@@ -1,0 +1,17 @@
+# Ignore environment variables
+.env
+
+# Python-related ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Django-related ignores
+db.sqlite3
+/media/
+staticfiles/
+
+# Virtual environment
+promoease-env/
