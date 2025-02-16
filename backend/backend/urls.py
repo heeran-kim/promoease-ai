@@ -1,5 +1,5 @@
 """
-URL configuration for promoease_backend project.
+URL configuration for backend project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,10 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.http import JsonResponse
-
-def ai_api_proxy(request):
-    return JsonResponse({"message": "AI API is connected to Django!"})
 
 urlpatterns = [
     path("admin/", admin.site.urls),
