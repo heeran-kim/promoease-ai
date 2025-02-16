@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'rest_framework', # Django REST Framework
     'rest_framework_simplejwt', # JWT Authentication
-    'users', # Users management app
+    'users',
 ]
 
 REST_FRAMEWORK = {
@@ -138,3 +138,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = 'users.User'
