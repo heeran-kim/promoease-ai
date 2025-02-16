@@ -9,9 +9,9 @@ __pycache__/
 *.swp
 
 # Django-related ignores
-db.sqlite3
-/media/
+media/
 staticfiles/
+migrations/
 
 # Virtual environment
 promoease-env/
